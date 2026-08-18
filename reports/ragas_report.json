@@ -1,0 +1,151 @@
+{
+  "aggregate": {
+    "faithfulness": 0.8083333333333332,
+    "answer_relevancy": 0.7799287260983327,
+    "context_precision": 0.9416666666120832,
+    "context_recall": 0.85
+  },
+  "num_questions": 20,
+  "failures": [
+    {
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "avg_score": 0.3958,
+      "all_scores": {
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.0,
+        "context_precision": 0.5833,
+        "context_recall": 1.0
+      },
+      "diagnosis": "LLM bịa — câu trả lời chứa thông tin không có trong context",
+      "suggested_fix": "Siết prompt (chỉ trả lời từ context), hạ temperature, bắt trích dẫn nguồn"
+    },
+    {
+      "question": "Nhân viên tạm ứng 15 triệu, sau 20 ngày mới thanh toán. Bị phạt bao nhiêu?",
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "avg_score": 0.6368,
+      "all_scores": {
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.8807,
+        "context_precision": 1.0,
+        "context_recall": 0.6667
+      },
+      "diagnosis": "LLM bịa — câu trả lời chứa thông tin không có trong context",
+      "suggested_fix": "Siết prompt (chỉ trả lời từ context), hạ temperature, bắt trích dẫn nguồn"
+    },
+    {
+      "question": "Nhân viên thử việc có được hưởng bảo hiểm sức khỏe PVI không?",
+      "worst_metric": "answer_relevancy",
+      "score": 0.0,
+      "avg_score": 0.75,
+      "all_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "diagnosis": "Câu trả lời lạc đề so với câu hỏi",
+      "suggested_fix": "Sửa prompt template, yêu cầu trả lời trực tiếp và đúng trọng tâm"
+    },
+    {
+      "question": "Nghỉ phép không lương 20 ngày cần ai phê duyệt?",
+      "worst_metric": "context_recall",
+      "score": 0.5,
+      "avg_score": 0.8215,
+      "all_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.786,
+        "context_precision": 1.0,
+        "context_recall": 0.5
+      },
+      "diagnosis": "Retrieval bỏ sót chunk chứa đáp án",
+      "suggested_fix": "Chỉnh lại chunking, tăng top_k, hoặc thêm BM25 vào hybrid search"
+    },
+    {
+      "question": "Nhân viên được tài trợ khóa học 25 triệu, nghỉ việc sau 8 tháng hoàn thành khóa học. Phải hoàn trả bao nhiêu?",
+      "worst_metric": "faithfulness",
+      "score": 0.5,
+      "avg_score": 0.8255,
+      "all_scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.8018,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "diagnosis": "LLM bịa — câu trả lời chứa thông tin không có trong context",
+      "suggested_fix": "Siết prompt (chỉ trả lời từ context), hạ temperature, bắt trích dẫn nguồn"
+    },
+    {
+      "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+      "worst_metric": "faithfulness",
+      "score": 0.5,
+      "avg_score": 0.831,
+      "all_scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.8241,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "diagnosis": "LLM bịa — câu trả lời chứa thông tin không có trong context",
+      "suggested_fix": "Siết prompt (chỉ trả lời từ context), hạ temperature, bắt trích dẫn nguồn"
+    },
+    {
+      "question": "Bảo hiểm sức khỏe PVI có hạn mức bao nhiêu cho nhân viên?",
+      "worst_metric": "faithfulness",
+      "score": 0.5,
+      "avg_score": 0.8395,
+      "all_scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.8579,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      },
+      "diagnosis": "LLM bịa — câu trả lời chứa thông tin không có trong context",
+      "suggested_fix": "Siết prompt (chỉ trả lời từ context), hạ temperature, bắt trích dẫn nguồn"
+    },
+    {
+      "question": "Thông tin lương thuộc cấp độ phân loại dữ liệu nào?",
+      "worst_metric": "context_recall",
+      "score": 0.5,
+      "avg_score": 0.8428,
+      "all_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.871,
+        "context_precision": 1.0,
+        "context_recall": 0.5
+      },
+      "diagnosis": "Retrieval bỏ sót chunk chứa đáp án",
+      "suggested_fix": "Chỉnh lại chunking, tăng top_k, hoặc thêm BM25 vào hybrid search"
+    },
+    {
+      "question": "Có cần kích hoạt xác thực đa yếu tố (MFA) không?",
+      "worst_metric": "context_recall",
+      "score": 0.5,
+      "avg_score": 0.8503,
+      "all_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9013,
+        "context_precision": 1.0,
+        "context_recall": 0.5
+      },
+      "diagnosis": "Retrieval bỏ sót chunk chứa đáp án",
+      "suggested_fix": "Chỉnh lại chunking, tăng top_k, hoặc thêm BM25 vào hybrid search"
+    },
+    {
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "worst_metric": "context_recall",
+      "score": 0.5,
+      "avg_score": 0.8628,
+      "all_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9511,
+        "context_precision": 1.0,
+        "context_recall": 0.5
+      },
+      "diagnosis": "Retrieval bỏ sót chunk chứa đáp án",
+      "suggested_fix": "Chỉnh lại chunking, tăng top_k, hoặc thêm BM25 vào hybrid search"
+    }
+  ]
+}

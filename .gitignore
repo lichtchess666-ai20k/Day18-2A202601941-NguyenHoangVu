@@ -5,5 +5,4 @@ __pycache__/
 .pytest_cache/
 qdrant_data/
 *.egg-info/
-reports/*.json
 .venv/
